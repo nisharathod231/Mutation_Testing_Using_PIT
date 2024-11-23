@@ -33,7 +33,7 @@ Mutation testing measures the quality of a test suite by evaluating its ability 
 2. **Unit Tests:** Required for PIT to evaluate how well the test suite detects errors.
 3. **Build Tool:** Maven is used for build automation and managing dependencies.
 
-<img width="1440" alt="Screenshot 2024-11-23 at 11 56 09 PM" src="https://github.com/user-attachments/assets/04c7fe3e-8420-4885-b61f-544d1999e053">
+<img width="1440" alt="Screenshot 2024-11-24 at 12 43 50 AM" src="https://github.com/user-attachments/assets/dda028ed-263b-4b98-9acc-0bcd913e2833">
 
 
 <div style="background-color: #eef9ff; padding: 10px; border: 1px solid #cce7ff; border-radius: 5px;">
