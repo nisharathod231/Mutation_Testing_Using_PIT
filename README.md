@@ -1,11 +1,17 @@
 # Mutation Testing with PIT
 
 ## Project Overview
-This project aims to improve healthcare delivery by empowering field health workers with a tablet-based application. The app assists health workers by managing their schedules and sending alerts for follow-up visits, ensuring no patient is overlooked. 
+This project aims to enhance financial management by creating a comprehensive system for tracking transactions, managing budgets, generating reports, and achieving financial goals. The system is tested rigorously using mutation testing to ensure its robustness and reliability.
 
-### Links
-- **GitHub Repository**: [MutationTestingUsingPIT](https://github.com/nishthapaul/MutationTestingUsingPIT)
-- **Figma Design**: [AtyaNidan](https://www.figma.com/AtyaNidan)
+---
+
+<div style="text-align: center;">
+    <h1 style="color: #007acc;">Welcome to the Finance Manager Project!</h1>
+    <img src="https://via.placeholder.com/600x300" alt="Finance Manager Illustration" style="border: 2px solid #ccc; border-radius: 10px;">
+    <p style="font-size: 1.2em; color: #555;">"Empowering you to take control of your finances with precision and ease."</p>
+</div>
+
+---
 
 ## Introduction
 Comprehensive testing ensures the reliability and robustness of software applications. This project focuses on rigorous testing at both unit and integration levels using mutation testing with the PIT tool. The goal is to evaluate the effectiveness of the test suite, uncover weaknesses in the codebase, and ensure high-quality performance under diverse scenarios.
@@ -13,41 +19,42 @@ Comprehensive testing ensures the reliability and robustness of software applica
 ## Mutation Testing
 Mutation testing measures the quality of a test suite by evaluating its ability to detect faults in the code. It involves introducing deliberate changes (mutations) to the code to simulate potential errors. The primary objective is to "kill" the mutants (detect and fail them) through robust test cases.
 
-### Key Concepts
-- **Mutation Operators**: Rules to introduce changes in the code (e.g., replacing `+` with `-`, modifying logical conditions).
-- **Mutant Killing**: A mutant is considered "killed" if a test case fails due to the mutation.
-- **Surviving Mutants**: Mutants that pass all tests indicate potential gaps in test coverage.
-
-Mutation testing provides deeper insights than traditional code coverage metrics by focusing on fault detection.
+<div style="background-color: #f9f9f9; padding: 10px; border-left: 5px solid #007acc;">
+    <h3 style="color: #007acc;">Key Concepts</h3>
+    <ul>
+        <li><strong>Mutation Operators:</strong> Rules to introduce changes in the code (e.g., replacing <code>+</code> with <code>-</code>, modifying logical conditions).</li>
+        <li><strong>Mutant Killing:</strong> A mutant is considered "killed" if a test case fails due to the mutation.</li>
+        <li><strong>Surviving Mutants:</strong> Mutants that pass all tests indicate potential gaps in test coverage.</li>
+    </ul>
+    <p>Mutation testing provides deeper insights than traditional code coverage metrics by focusing on fault detection.</p>
+</div>
 
 ## Tools Used
-- **PIT (Pitest)**: A popular mutation testing tool for Java.
-- **Maven**: Used to manage dependencies and build the project.
-
-## Class Diagram
-(Include your class diagram image here.)
+- <strong>PIT (Pitest):</strong> A popular mutation testing tool for Java.
+- <strong>Maven:</strong> Used to manage dependencies and build the project.
 
 ## Implementation Using PIT
 
 ### Project Setup
-1. **Codebase**: A Java-based application with logically divided packages and classes.
-2. **Unit Tests**: Required for PIT to evaluate how well the test suite detects errors.
-3. **Build Tool**: Maven is used for build automation and managing dependencies.
+1. **Codebase:** A Java-based application with logically divided packages and classes.
+2. **Unit Tests:** Required for PIT to evaluate how well the test suite detects errors.
+3. **Build Tool:** Maven is used for build automation and managing dependencies.
 
-### Adding PIT to Build Configuration
-Add the PIT plugin to the `pom.xml` file under the `<build>` tag:
-```xml
-<plugin>
-    <groupId>org.pitest</groupId>
-    <artifactId>pitest-maven</artifactId>
-    <version>VERSION</version>
-    <configuration>
-        <targetClasses>com.example.*</targetClasses>
-        <targetTests>com.example.*Test</targetTests>
-        <threads>4</threads>
-    </configuration>
-</plugin>
-```
+<div style="background-color: #eef9ff; padding: 10px; border: 1px solid #cce7ff; border-radius: 5px;">
+    <h4 style="color: #007acc;">Adding PIT to Build Configuration</h4>
+    <pre style="background-color: #f4f4f4; padding: 10px; border-radius: 5px;">
+<code>&lt;plugin&gt;
+    &lt;groupId&gt;org.pitest&lt;/groupId&gt;
+    &lt;artifactId&gt;pitest-maven&lt;/artifactId&gt;
+    &lt;version&gt;VERSION&lt;/version&gt;
+    &lt;configuration&gt;
+        &lt;targetClasses&gt;com.example.*&lt;/targetClasses&gt;
+        &lt;targetTests&gt;com.example.*Test&lt;/targetTests&gt;
+        &lt;threads&gt;4&lt;/threads&gt;
+    &lt;/configuration&gt;
+&lt;/plugin&gt;
+    </code></pre>
+</div>
 
 ### Running PIT
 Use the following Maven command to execute mutation testing:
@@ -62,9 +69,9 @@ After execution, PIT generates a detailed HTML report located in:
 target/pit-reports
 ```
 Open the report in a browser to analyze:
-- **Mutation Score**: Percentage of mutants killed.
-- **Mutant Details**: Type of mutation, location, and status (killed or surviving).
-- **Surviving Mutants**: Highlight gaps in the test suite.
+- **Mutation Score:** Percentage of mutants killed.
+- **Mutant Details:** Type of mutation, location, and status (killed or surviving).
+- **Surviving Mutants:** Highlight gaps in the test suite.
 
 ## PIT Test Coverage Report
 The report provides the following insights:
@@ -79,17 +86,25 @@ Common mutation types include:
 - **Math Mutator**
 
 ### Interactive HTML Report
-- **Dashboard Overview**: Graphs and percentages of overall mutation coverage.
-- **Class-Level Views**: Statistics for each class with links to specific code sections.
-- **Color-Coded Indicators**:
-  - **Green**: Mutants killed by tests.
-  - **Red**: Surviving mutants.
-  - **Yellow**: Skipped or unexecuted mutants.
+- **Dashboard Overview:** Graphs and percentages of overall mutation coverage.
+- **Class-Level Views:** Statistics for each class with links to specific code sections.
+- **Color-Coded Indicators:**
+  - **Green:** Mutants killed by tests.
+  - **Red:** Surviving mutants.
+  - **Yellow:** Skipped or unexecuted mutants.
+
+<div style="text-align: center; margin: 20px;">
+    <img src="https://via.placeholder.com/600x400" alt="PIT HTML Report Sample" style="border-radius: 10px;">
+</div>
 
 ## Optimizing Test Cases
-1. **Root Cause Analysis**: Identify why surviving mutants were not killed (e.g., missing tests, inadequate assertions).
-2. **Enhancing Tests**: Add or modify test cases to cover edge cases and complex logic.
-3. **Configuration Optimization**: Focus mutation testing on critical classes and exclude boilerplate code.
+1. **Root Cause Analysis:** Identify why surviving mutants were not killed (e.g., missing tests, inadequate assertions).
+2. **Enhancing Tests:** Add or modify test cases to cover edge cases and complex logic.
+3. **Configuration Optimization:** Focus mutation testing on critical classes and exclude boilerplate code.
 
 ## Conclusion
-By leveraging mutation testing, we ensure higher code quality and increased confidence in the application’s reliability, especially for critical healthcare use cases.
+By leveraging mutation testing, we ensure higher code quality and increased confidence in the application’s reliability, especially for critical financial use cases.
+
+<div style="text-align: center;">
+    <p style="font-size: 1.1em; color: #555;">"Don't let bugs survive! Strengthen your codebase with PIT."</p>
+</div>
