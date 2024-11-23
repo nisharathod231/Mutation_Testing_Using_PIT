@@ -41,11 +41,11 @@ Mutation testing measures the quality of a test suite by evaluating its ability 
 <code>&lt;plugin&gt;
     &lt;groupId&gt;org.pitest&lt;/groupId&gt;
     &lt;artifactId&gt;pitest-maven&lt;/artifactId&gt;
-    &lt;version&gt;VERSION&lt;/version&gt;
+    &lt;version&gt;1.17.1&lt;/version&gt;
     &lt;configuration&gt;
-        &lt;targetClasses&gt;com.example.*&lt;/targetClasses&gt;
-        &lt;targetTests&gt;com.example.*Test&lt;/targetTests&gt;
-        &lt;threads&gt;4&lt;/threads&gt;
+        &lt;mutators&gt;
+            &lt;mutator&gt;ALL&lt;/mutator&gt;
+        &lt;/mutators&gt;
     &lt;/configuration&gt;
 &lt;/plugin&gt;
     </code></pre>
