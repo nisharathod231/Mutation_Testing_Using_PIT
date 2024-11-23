@@ -1,20 +1,13 @@
-# Mutation Testing with PIT
-
 ## Project Overview
-This project aims to enhance financial management by creating a comprehensive system for tracking transactions, managing budgets, generating reports, and achieving financial goals. The system is tested rigorously using mutation testing to ensure its robustness and reliability.
-
----
-
-<div style="text-align: center;">
-    <h1 style="color: #007acc;">Welcome to the Finance Manager Project!</h1>
-    <img src="https://via.placeholder.com/600x300" alt="Finance Manager Illustration" style="border: 2px solid #ccc; border-radius: 10px;">
-    <p style="font-size: 1.2em; color: #555;">"Empowering you to take control of your finances with precision and ease."</p>
-</div>
+This project aims to enhance financial management by creating a comprehensive system for tracking transactions, managing budgets, generating reports, and achieving financial goals. The system is tested rigorously using **mutation testing** to ensure its robustness and reliability.
 
 ---
 
 ## Introduction
 Comprehensive testing ensures the reliability and robustness of software applications. This project focuses on rigorous testing at both unit and integration levels using mutation testing with the PIT tool. The goal is to evaluate the effectiveness of the test suite, uncover weaknesses in the codebase, and ensure high-quality performance under diverse scenarios.
+
+<img width="979" alt="Screenshot 2024-11-24 at 12 38 17 AM" src="https://github.com/user-attachments/assets/75bf8bc2-0106-4b78-be46-2dd56b12d83d">
+
 
 ## Mutation Testing
 Mutation testing measures the quality of a test suite by evaluating its ability to detect faults in the code. It involves introducing deliberate changes (mutations) to the code to simulate potential errors. The primary objective is to "kill" the mutants (detect and fail them) through robust test cases.
@@ -105,6 +98,3 @@ Common mutation types include:
 ## Conclusion
 By leveraging mutation testing, we ensure higher code quality and increased confidence in the application’s reliability, especially for critical financial use cases.
 
-<div style="text-align: center;">
-    <p style="font-size: 1.1em; color: #555;">"Don't let bugs survive! Strengthen your codebase with PIT."</p>
-</div>
