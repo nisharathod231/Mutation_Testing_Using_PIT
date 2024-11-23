@@ -6,9 +6,6 @@ This project aims to enhance financial management by creating a comprehensive sy
 ## Introduction
 Comprehensive testing ensures the reliability and robustness of software applications. This project focuses on rigorous testing at both unit and integration levels using mutation testing with the PIT tool. The goal is to evaluate the effectiveness of the test suite, uncover weaknesses in the codebase, and ensure high-quality performance under diverse scenarios.
 
-<img width="979" alt="Screenshot 2024-11-24 at 12 38 17 AM" src="https://github.com/user-attachments/assets/75bf8bc2-0106-4b78-be46-2dd56b12d83d">
-
-
 ## Mutation Testing
 Mutation testing measures the quality of a test suite by evaluating its ability to detect faults in the code. It involves introducing deliberate changes (mutations) to the code to simulate potential errors. The primary objective is to "kill" the mutants (detect and fail them) through robust test cases.
 
@@ -28,13 +25,15 @@ Mutation testing measures the quality of a test suite by evaluating its ability 
 
 ## Implementation Using PIT
 
+### Class Diagram
+
+<img width="1440" alt="Screenshot 2024-11-24 at 12 43 50 AM" src="https://github.com/user-attachments/assets/03b2ee9d-cc51-4e05-bd59-b8043c92345d">
+
+
 ### Project Setup
 1. **Codebase:** A Java-based application with logically divided packages and classes.
 2. **Unit Tests:** Required for PIT to evaluate how well the test suite detects errors.
 3. **Build Tool:** Maven is used for build automation and managing dependencies.
-
-<img width="1440" alt="Screenshot 2024-11-24 at 12 43 50 AM" src="https://github.com/user-attachments/assets/dda028ed-263b-4b98-9acc-0bcd913e2833">
-
 
 <div style="background-color: #eef9ff; padding: 10px; border: 1px solid #cce7ff; border-radius: 5px;">
     <h4 style="color: #007acc;">Adding PIT to Build Configuration</h4>
