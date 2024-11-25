@@ -87,10 +87,10 @@ Common mutation types include:
   - **Green:** Mutants killed by tests.
   - **Red:** Surviving mutants.
   - **Yellow:** Skipped or unexecuted mutants.
+    
+![WhatsApp Image 2024-11-24 at 6 55 12 PM](https://github.com/user-attachments/assets/7d1a86d0-09a5-4009-b8a3-6338a7e453cc)
 
-<div style="text-align: center; margin: 20px;">
-    <img src="https://via.placeholder.com/600x400" alt="PIT HTML Report Sample" style="border-radius: 10px;">
-</div>
+![WhatsApp Image 2024-11-24 at 6 55 26 PM](https://github.com/user-attachments/assets/3b7d281c-3285-4c80-b7dc-ef9fb3c9aa1b)
 
 ## Optimizing Test Cases
 1. **Root Cause Analysis:** Identify why surviving mutants were not killed (e.g., missing tests, inadequate assertions).
