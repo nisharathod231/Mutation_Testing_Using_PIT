@@ -31,33 +31,29 @@ Mutation testing measures the quality of a test suite by evaluating its ability 
 
 ## Class Description
 
-`account`: The `Account` class manages financial operations for a user. It supports income and expense transactions, budget management for specific categories, and maintains a wallet with deposit and withdrawal functionalities. The class also provides a history of all transactions and associated budgets.
-
-
-`analytics`: `SpendingAnalytics.java` provides tools to analyze financial transactions. It calculates the percentage of expenses by category and identifies unusual transactions based on a statistical threshold. This class uses streams for data grouping and reduction, enabling detailed spending insights and anomaly detection.
-
-`bills`: `Bill.java` represents a financial bill with properties such as amount, due date, category, and payment status. It supports marking a bill as paid, checking overdue status, calculating days until due, and generating the next bill for recurring payments based on the specified recurrence pattern. `BillManager.java` handles the management of bills, including adding bills, identifying overdue and upcoming bills, processing recurring bills, and sending reminders. It leverages a `NotificationService` to notify users about upcoming payments.
-
-`budget`:`Budge.javat` represents a financial budget for a specific category. It tracks spending, calculates the remaining budget, and checks if spending has exceeded the set limit. It uses the `Money` class for currency management.
-
-`goals`: `FinancialGoal.java` represents a financial target with a specific amount, date, and category. It tracks progress toward the goal, calculates the remaining amount, and provides insights such as the required monthly savings to meet the target.
-
-`manager`: `FinanceManager.java` handles the management of financial accounts, budgets, and transactions. It acts as a central controller for creating accounts, transferring money, and accessing financial data.
-
-`models`: `Currency.java`, `Money.java`, and `Wallet.java`,manage currencies, monetary values, and wallet operations. Currency handles conversions between different currencies using predefined factors. Money encapsulates monetary operations like addition, subtraction, and conversion while ensuring validity. Wallet manages deposits, withdrawals, and total amounts across different currencies.
-
-`notifications`: These classes implement notification strategies for sending alerts via SMS and Email. `SMSNotification.java` sends notifications to a specified phone number. `EmailNotification.java` sends notifications to a specified email address. Both implement the `NotificationStrategy` interface for consistent behavior.
-
-`reports`: `FianancialReports.javaa` generates a financial report for a specified period, summarizing income by source and expenses by category, while converting values to a given currency.
-
-`savings`: `AutomaticSavingsManager.java` manages automatic savings rules, processing transactions and transferring savings to target accounts based on defined rules. `SavingsRule.java` defines savings rules such as percentage of income, round-up, and fixed amount, calculating savings based on transaction type and parameters.
-
-`tags`: `TransactionTag.java` represents a tag for a transaction with a name, description, and color, and includes equality and hashcode methods based on the tag name. `TagManager.java` manages transaction tags, allowing for creating tags, tagging transactions, retrieving transactions by tag, and grouping transactions by tag.
-
-`transactions`: `Transaction.java` abstract class representing a transaction with fields for amount, description, type, and date. It includes an abstract method to generate a transaction summary. `IncomeTransaction.java` extends `Transaction` to represent income transactions, with an additional field for the source of income. It overrides the method to return a formatted summary. `ExpenseTransaction.java` extends `Transaction` to represent expense transactions, with an additional field for the expense category. It overrides the method to return a formatted summary. `TransferTransaction.java` extends `Transaction` to represent transfer transactions between accounts. It includes source and target accounts and overrides the method to return a formatted summary.
-
-
-
+| **Module**       | **Class**                   | **Description**                                                                                                                                                         |
+|------------------|-----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **analytics**    | `SpendingAnalytics.java`     | Provides tools to analyze financial transactions, calculate the percentage of expenses by category, and identify unusual transactions based on a statistical threshold. |
+| **bills**        | `Bill.java`                  | Represents a financial bill with properties like amount, due date, category, and payment status. Supports marking as paid, checking overdue status, and generating the next bill for recurring payments. |
+|                  | `BillManager.java`           | Manages bills, adds bills, identifies overdue/upcoming bills, processes recurring bills, and sends reminders using a `NotificationService`.                            |
+| **budget**       | `Budget.java`                | Represents a financial budget for a specific category, tracks spending, calculates remaining budget, and checks if spending exceeds the limit. Uses the `Money` class. |
+| **goals**        | `FinancialGoal.java`         | Represents a financial target, tracks progress, calculates the remaining amount, and provides insights like the required monthly savings to meet the target.          |
+| **manager**      | `FinanceManager.java`        | Handles management of financial accounts, budgets, and transactions. Acts as a central controller for creating accounts, transferring money, and accessing financial data. |
+| **models**       | `Currency.java`              | Manages currencies, handles conversions between different currencies using predefined factors.                                                                        |
+|                  | `Money.java`                 | Encapsulates monetary operations (addition, subtraction, conversion) while ensuring validity.                                                                          |
+|                  | `Wallet.java`                | Manages deposits, withdrawals, and total amounts across different currencies.                                                                                           |
+| **notifications**| `SMSNotification.java`       | Sends notifications to a specified phone number.                                                                                                                       |
+|                  | `EmailNotification.java`     | Sends notifications to a specified email address.                                                                                                                     |
+| **reports**      | `FinancialReports.java`      | Generates a financial report summarizing income by source and expenses by category for a specified period, while converting values to a given currency.                 |
+| **savings**      | `AutomaticSavingsManager.java` | Manages automatic savings rules, processes transactions, and transfers savings to target accounts based on defined rules.                                               |
+|                  | `SavingsRule.java`           | Defines savings rules (percentage of income, round-up, fixed amount) and calculates savings based on transaction type and parameters.                                   |
+| **tags**         | `TransactionTag.java`        | Represents a tag for a transaction with a name, description, and color, including equality and hashcode methods based on the tag name.                                  |
+|                  | `TagManager.java`            | Manages transaction tags, allowing for creating tags, tagging transactions, retrieving transactions by tag, and grouping transactions by tag.                          |
+| **transactions** | `Transaction.java`           | Abstract class representing a transaction with fields for amount, description, type, and date. Includes an abstract method to generate a transaction summary.          |
+|                  | `IncomeTransaction.java`     | Extends `Transaction` for income transactions, with an additional source field. Overrides the method to return a formatted summary.                                      |
+|                  | `ExpenseTransaction.java`    | Extends `Transaction` for expense transactions, with an additional category field. Overrides the method to return a formatted summary.                                  |
+|                  | `TransferTransaction.java`   | Extends `Transaction` for transfer transactions, with source and target accounts. Overrides the method to return a formatted summary.                                    |
+| **account**      | `Account.java`               | Manages financial operations for a user, supporting income and expense transactions, budget management for specific categories, and maintaining a wallet with deposit and withdrawal functionalities. Provides a history of all transactions and associated budgets. |
 
 
 ### Project Setup
