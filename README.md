@@ -29,7 +29,11 @@ Mutation testing measures the quality of a test suite by evaluating its ability 
 
 <img width="1440" alt="Screenshot 2024-11-24 at 12 43 50 AM" src="https://github.com/user-attachments/assets/03b2ee9d-cc51-4e05-bd59-b8043c92345d">
 
-## Class Description
+### ASCII folder structure
+
+<img width="432" alt="Screenshot 2024-11-25 at 9 25 03 AM" src="https://github.com/user-attachments/assets/fe45860c-0f01-4ff6-84c9-6463f7ba75f3">
+
+### Class Description
 
 | **Module**       | **Class**                   | **Description**                                                                                                                                                         |
 |------------------|-----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
